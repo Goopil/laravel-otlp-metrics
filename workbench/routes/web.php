@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Workbench\App\Jobs\FailJob;
 use Workbench\App\Jobs\FastJob;
 use Workbench\App\Jobs\SlowJob;
-use Workbench\App\Jobs\FailJob;
 
 Route::get('/', function () {
     return 'Laravel OTLP Metrics Workbench is running!';
@@ -15,6 +15,7 @@ Route::get('/test/fast', function () {
 
 Route::get('/test/slow', function () {
     sleep(1);
+
     return 'Slow response';
 });
 

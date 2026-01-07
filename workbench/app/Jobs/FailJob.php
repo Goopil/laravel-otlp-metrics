@@ -2,16 +2,16 @@
 
 namespace Workbench\App\Jobs;
 
+use Goopil\OtlpMetrics\Contracts\Queue\ShouldTrackJobDuration;
+use Goopil\OtlpMetrics\Contracts\Queue\ShouldTrackJobMetrics;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Goopil\OtlpMetrics\Contracts\Queue\ShouldTrackJobMetrics;
-use Goopil\OtlpMetrics\Contracts\Queue\ShouldTrackJobDuration;
 use RuntimeException;
 
-class FailJob implements ShouldQueue, ShouldTrackJobMetrics, ShouldTrackJobDuration
+class FailJob implements ShouldQueue, ShouldTrackJobDuration, ShouldTrackJobMetrics
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 

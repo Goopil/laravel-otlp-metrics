@@ -5,17 +5,16 @@ namespace Goopil\OtlpMetrics\Tests\Feature;
 use Goopil\OtlpMetrics\Contracts\MetricsServiceInterface;
 use Goopil\OtlpMetrics\Services\MetricsService;
 use Goopil\OtlpMetrics\Tests\TestCase;
+use Goopil\OtlpMetrics\Trackers\CronJob\CronJobTracker;
 use Goopil\OtlpMetrics\Trackers\Http\HttpTracker;
 use Goopil\OtlpMetrics\Trackers\Queue\QueueTracker;
-use Goopil\OtlpMetrics\Trackers\CronJob\CronJobTracker;
 use Mockery;
-use OpenTelemetry\API\Metrics\CounterInterface;
-use OpenTelemetry\API\Metrics\HistogramInterface;
 use Orchestra\Testbench\Concerns\WithWorkbench;
 
 class WorkbenchIntegrationTest extends TestCase
 {
     use WithWorkbench;
+
     protected function setUp(): void
     {
         parent::setUp();
