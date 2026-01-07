@@ -1,4 +1,9 @@
+[![Tests](https://github.com/goopil/laravel-otlp-metrics/actions/workflows/tests.yml/badge.svg)](https://github.com/goopil/laravel-otlp-metrics/actions/workflows/tests.yml)
+
 # Laravel OpenTelemetry Metrics
+
+> [!CAUTION]
+> **Work In Progress**: This library is currently under active development. The API and configuration structure are subject to change until a stable version (1.0.0) is released.
 
 A Laravel package for sending Prometheus metrics via OpenTelemetry with support for gRPC and HTTP, with separate
 configuration for API, Workers, and CronJobs.
