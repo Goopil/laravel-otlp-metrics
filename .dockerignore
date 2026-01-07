@@ -1,0 +1,9 @@
+vendor/
+.git/
+.idea/
+.phpunit.cache
+composer.lock
+.DS_Store
+tests/
+examples/
+
